@@ -25,5 +25,5 @@ int main(void)
 }
 	void sigint_handler(int sig)
 	{
-		printf("Jangan kacau saya!\n");
+		printf("This special signal handler for sigint!\n");
 	}
