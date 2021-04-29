@@ -6,10 +6,10 @@
 int main(void)
 {
 
-	void sigtstp_handler(int sig);
+	void sigquit_handler(int sig);
 	char s[200];
 
-	if(signal(SIGTSTP, sigtstp_handler) == SIG_ERR){
+	if(signal(SIGQUIT, sigquit_handler) == SIG_ERR){
 	perror("signal");
 	exit(1);
 	}
@@ -23,7 +23,7 @@ int main(void)
 
 	return 0;
 }
-	void sigtstp_handler(int sig)
+	void sigquit_handler(int sig)
 	{
-		printf("This special signal handler for sigtstp!\n");
+		printf("This special signal handler for sigquit!\n");
 	}
