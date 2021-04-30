@@ -6,10 +6,10 @@
 int main(void)
 {
 
-	void sigquit_handler(int sig);
+	void sigint_handler(int sig);
 	char s[200];
 
-	if(signal(SIGQUIT, sigquit_handler) == SIG_ERR){
+	if(signal(SIGINT, sigint_handler) == SIG_ERR){
 	perror("signal");
 	exit(1);
 	}
@@ -23,7 +23,7 @@ int main(void)
 
 	return 0;
 }
-	void sigquit_handler(int sig)
+	void sigint_handler(int sig)
 	{
-		printf("This special signal handler for sigquit!\n");
+		printf("Jangan Kacau Saya!\n");
 	}
